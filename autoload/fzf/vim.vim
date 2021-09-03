@@ -314,7 +314,7 @@ endfunction
 
 let s:default_action = {
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
+  \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 function! s:action_for(key, ...)
@@ -614,7 +614,7 @@ endfunction
 function! fzf#vim#history(...)
   return s:fzf('history-files', {
   \ 'source':  fzf#vim#_recent_files(),
-  \ 'options': ['-m', '--header-lines', !empty(expand('%')), '--prompt', 'Hist> ']
+  \ 'options': ['-m', '--header-lines', 0, '--prompt', 'History> ']
   \}, a:000)
 endfunction
 

@@ -75,7 +75,7 @@ function! s:history(arg, extra, bang)
   elseif a:arg[0] == '/'
     call fzf#vim#search_history(bang)
   else
-    call fzf#vim#history(a:extra, bang)
+    call fzf#vim#history({}, bang)
   endif
 endfunction
 
